@@ -4492,8 +4492,8 @@ footer.color-yellow .footer-bottom p a {
     position: fixed;
     left: 0px;
     top: 0px;
-    width: 100%;
-    height: 100%;
+    width: 150px;
+    height: 100px%;
     z-index: 999999;
     background: url(assets/img/logo.png) center no-repeat var(--white);
     text-align: center;
@@ -4628,4 +4628,5 @@ footer.demo .copyright {
     padding: 10px;
     background: #232323;
     transform: rotate(45deg);
+
 }
