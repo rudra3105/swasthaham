@@ -226,7 +226,7 @@
 
     <!-- Start Banner 
     ============================================= -->
-    <div class="banner-area banner-style-two text-small content-double button-effect bg-cover" style="background-image: url(assets/img/banner/2.jpg);">
+    <div class="banner-area banner-style-two text-small content-double button-effect bg-cover" style="background-image: url(assets/img/Hero.jpeg);">
         <div class="box-table">
             <div class="box-cell">
                 <div class="container">
@@ -240,52 +240,151 @@
                                         <li>Weekly Tracking</li>
                                         <li>Long-term Support</li>
                                     </ul>
-                                    <h1>1000+ Transformations and Counting — Your Journey Starts Here</h1>
-                                    <p>
+                                    <h1 style="color: white;">1000+ Transformations and Counting — Your Journey Starts Here</h1>
+                                    <p style="color: white;">
                                       Begin your sustainable wellness journey with science-backed coaching, personalized nutrition & fitness guidance, and mentorship designed for real-life results.
                                     </p>
                                 </div>
                             </div>
                             <!-- End Banner Left Content -->
 
-                            <!-- Start Banner Form -->
-                            <div class="form col-lg-5 offset-lg-1" id="lead-form">
-                                <div class="form-info">
-                                    <h2>Book a <span>FREE</span> Consultation</h2>
-                                    <form action="#">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="form-group">
-                                                    <input class="form-control" placeholder="Name*" type="text" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="form-group">
-                                                    <input class="form-control" placeholder="Email*" type="email" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="form-group">
-                                                    <input class="form-control" placeholder="Message" type="text" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <button type="submit">
-                                                    Submit
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <img src="assets/img/illustration/11.png" alt="Image Not Found">
-                                </div>
-                            </div>
-                            <!-- End Banner Form -->
+                          <!-- Start Banner Form -->
+<div class="form col-lg-5 offset-lg-1" id="lead-form">
+  <div class="form-info">
+    <h2>Book a <span>FREE</span> Consultation</h2>
+
+    <!-- Bootstrap validation (client-side) -->
+    <form action="#" method="post" class="needs-validation" novalidate>
+      <!-- Name -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="lf-name" class="sr-only">Full Name</label>
+            <input
+              id="lf-name"
+              name="name"
+              class="form-control"
+              type="text"
+              placeholder="Full Name*"
+              required
+              minlength="2"
+              maxlength="60"
+              pattern="^[A-Za-zÀ-ÿ'’.\- ]{2,60}$"
+            >
+            <div class="invalid-feedback">Please enter your name (letters only).</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="lf-phone" class="sr-only">Phone Number</label>
+            <input
+              id="lf-phone"
+              name="phone"
+              class="form-control"
+              type="tel"
+              placeholder="Phone Number*"
+              required
+              inputmode="tel"
+              autocomplete="tel"
+              pattern="^[6-9]\d{9}$"
+            >
+            <div class="invalid-feedback">Enter a valid 10-digit mobile number (India).</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="lf-email" class="sr-only">Email ID</label>
+            <input
+              id="lf-email"
+              name="email"
+              class="form-control"
+              type="email"
+              placeholder="Email ID*"
+              required
+              maxlength="100"
+              autocomplete="email"
+            >
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- City -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="lf-city" class="sr-only">City</label>
+            <input
+              id="lf-city"
+              name="city"
+              class="form-control"
+              type="text"
+              placeholder="City*"
+              required
+              minlength="2"
+              maxlength="60"
+            >
+            <div class="invalid-feedback">Please enter your city.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Message -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="lf-message" class="sr-only">Message</label>
+            <textarea
+              id="lf-message"
+              name="message"
+              class="form-control"
+              rows="3"
+              placeholder="Message (your goals, timeline, any health notes)*"
+              required
+              minlength="10"
+              maxlength="500"
+            ></textarea>
+            <div class="invalid-feedback">Please add a short message (at least 10 characters).</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="row">
+        <div class="col-lg-12">
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Tiny Bootstrap validation helper (keeps your design; optional but recommended) -->
+    <script>
+      (function () {
+        'use strict';
+        var forms = document.querySelectorAll('.needs-validation');
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      })();
+    </script>
+
+  </div>
+</div>
+<!-- End Banner Form -->
 
                         </div>
                     </div>
@@ -619,7 +718,7 @@
         <!-- Illustration / Image -->
         <div class="col-lg-5">
           <div class="thumb text-center text-lg-start">
-            <img src="assets/img/illustration/12.png" class="img-fluid rounded-4 shadow-sm" alt="Swasthaham transformation comparison illustration" loading="lazy" decoding="async">
+            <img src="assets/img/comparison.jpeg" class="img-fluid rounded-4 shadow-sm" alt="Swasthaham transformation comparison illustration" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -637,7 +736,7 @@
       
       <!-- Visual Side -->
       <div class="col-12 col-lg-6">
-        <div class="thumb bg-cover h-100" style="min-height: 300px; background-image: url('assets/img/banner/5.jpg');" role="img" aria-label="Swasthaham transformation success stories background"></div>
+        <div class="thumb bg-cover h-100" style="min-height: 300px; background-image: url('assets/img/result.jpeg');" role="img" aria-label="Swasthaham transformation success stories background"></div>
       </div>
 
       <!-- Content Side -->
@@ -742,7 +841,7 @@
         <!-- Option A: YouTube/Vimeo embed -->
         <div class="ratio ratio-16x9 overflow-hidden">
           <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
+            src="/assets/img/Swasthaham-new-video.mp4"
             title="Swasthaham Transformation — Overview & Client Results"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
@@ -842,6 +941,198 @@
     </div>
   </div>
 </section>
+
+
+
+<!-- Start Coaches
+============================================= -->
+<section id="coaches" class="default-padding">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <h2 class="title">Find <span>your coach</span></h2>
+        <p class="text-muted mb-4">
+          Our dedicated coaches help you build healthy habits, optimize your workouts,
+          and improve nutrition through a personalized plan and weekly reviews.
+          Start your journey with expert support — step by step.
+        </p>
+      </div>
+    </div>
+
+    <!-- Advanced Coaches -->
+    <div class="row">
+      <div class="col-12">
+        <h4 class="mb-3 text-center">Advanced Coaches</h4>
+      </div>
+
+      <!-- Coach card -->
+      <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <article class="card h-100 shadow-sm">
+          <img src="assets/img/team/Charayan.webp" class="card-img-top" alt="Coach Charanya Rangaprasad">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h5 class="card-title mb-0">Charanya Rangaprasad</h5>
+              <span class="badge bg-warning text-dark">Advanced</span>
+            </div>
+            <p class="text-muted small mb-2">Specialties: Fat loss • Habit coaching • Women’s health</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold">₹12,500</span>
+              <a href="#lead-form" class="btn btn-sm btn-success" data-coach="Charanya Rangaprasad">Choose Coach</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <article class="card h-100 shadow-sm">
+          <img src="assets/img/team/Rakesh.webp" class="card-img-top" alt="Coach Rakesh Gudavarthy">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h5 class="card-title mb-0">Rakesh Gudavarthy</h5>
+              <span class="badge bg-warning text-dark">Advanced</span>
+            </div>
+            <p class="text-muted small mb-2">Specialties: Strength • Conditioning • Nutrition planning</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold">₹12,500</span>
+              <a href="#lead-form" class="btn btn-sm btn-success" data-coach="Rakesh Gudavarthy">Choose Coach</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <article class="card h-100 shadow-sm">
+          <img src="assets/img/team/Rumpa.webp" class="card-img-top" alt="Coach Dr. Rumpa Das">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h5 class="card-title mb-0">Dr. Rumpa Das</h5>
+              <span class="badge bg-warning text-dark">Advanced</span>
+            </div>
+            <p class="text-muted small mb-2">Specialties: Metabolic health • PCOS • Thyroid support</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold">₹12,500</span>
+              <a href="#lead-form" class="btn btn-sm btn-success" data-coach="Dr. Rumpa Das">Choose Coach</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <article class="card h-100 shadow-sm">
+          <img src="assets/img/team/Mahima-3.webp" class="card-img-top" alt="Coach Mahima Gattani">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h5 class="card-title mb-0">Mahima Gattani</h5>
+              <span class="badge bg-warning text-dark">Advanced</span>
+            </div>
+            <p class="text-muted small mb-2">Specialties: Weight management • Lifestyle design</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold">₹12,500</span>
+              <a href="#lead-form" class="btn btn-sm btn-success" data-coach="Mahima Gattani">Choose Coach</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <article class="card h-100 shadow-sm">
+          <img src="assets/img/team/Gaurav.webp" class="card-img-top" alt="Coach Gaurav Gupta">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h5 class="card-title mb-0">Gaurav Gupta</h5>
+              <span class="badge bg-warning text-dark">Advanced</span>
+            </div>
+            <p class="text-muted small mb-2">Specialties: Muscle gain • Performance • Nutrition</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold">₹12,500</span>
+              <a href="#lead-form" class="btn btn-sm btn-success" data-coach="Gaurav Gupta">Choose Coach</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <article class="card h-100 shadow-sm">
+          <img src="assets/img/team/Manu.webp" class="card-img-top" alt="Coach Dr. Manu Mishra">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h5 class="card-title mb-0">Dr. Manu Mishra</h5>
+              <span class="badge bg-warning text-dark">Advanced</span>
+            </div>
+            <p class="text-muted small mb-2">Specialties: Rehab-friendly training • Mobility • Health</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold">₹12,500</span>
+              <a href="#lead-form" class="btn btn-sm btn-success" data-coach="Dr. Manu Mishra">Choose Coach</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Primary Coaches -->
+    <div class="row mt-2">
+      <div class="col-12">
+        <h4 class="mb-3 text-center">Primary Coaches</h4>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <article class="card h-100 shadow-sm">
+          <img src="assets/img/team/Profile-picture-2.webp" class="card-img-top" alt="Coach Deepti Mangesh">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h5 class="card-title mb-0">Deepti Mangesh</h5>
+              <span class="badge bg-info text-dark">Primary</span>
+            </div>
+            <p class="text-muted small mb-2">Specialties: Weight loss • Habit building</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold">₹8,000</span>
+              <a href="#lead-form" class="btn btn-sm btn-outline-success" data-coach="Deepti Mangesh">Choose Coach</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <article class="card h-100 shadow-sm">
+          <img src="assets/img/team/Milind.webp" class="card-img-top" alt="Coach Milind Joshi">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h5 class="card-title mb-0">Milind Joshi</h5>
+              <span class="badge bg-info text-dark">Primary</span>
+            </div>
+            <p class="text-muted small mb-2">Specialties: Strength basics • Lifestyle coaching</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold">₹8,000</span>
+              <a href="#lead-form" class="btn btn-sm btn-outline-success" data-coach="Milind Joshi">Choose Coach</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4 mb-4">
+        <article class="card h-100 shadow-sm">
+          <img src="assets/img/team/Sweety.webp" class="card-img-top" alt="Coach Sweety Agarwal">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h5 class="card-title mb-0">Sweety Agarwal</h5>
+              <span class="badge bg-info text-dark">Primary</span>
+            </div>
+            <p class="text-muted small mb-2">Specialties: General fitness • Nutrition habits</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold">₹8,000</span>
+              <a href="#lead-form" class="btn btn-sm btn-outline-success" data-coach="Sweety Agarwal">Choose Coach</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- End Coaches -->
+
 
     <!-- Start Pricing Area
     ============================================= -
@@ -1382,7 +1673,7 @@
 
     <!-- Start Signup 
     ============================================= -->
-    <div class="signup-area bg-fixed shadow theme text-light default-padding text-center" style="background-image: url(assets/img/banner/4.jpg);">
+    <div class="signup-area bg-fixed shadow theme text-light default-padding text-center" style="background-image: url(assets/img/about.jpeg);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
